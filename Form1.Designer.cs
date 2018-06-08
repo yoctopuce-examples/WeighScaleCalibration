@@ -78,9 +78,9 @@
             this.tempChangeWorker = new System.ComponentModel.BackgroundWorker();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dialogPanel = new System.Windows.Forms.Panel();
-            this.dialogTitle = new System.Windows.Forms.Label();
-            this.dialogButton = new System.Windows.Forms.Button();
             this.errorMessage = new System.Windows.Forms.Label();
+            this.dialogButton = new System.Windows.Forms.Button();
+            this.dialogTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deltaRatioTrackBar)).BeginInit();
@@ -172,9 +172,9 @@
             this.label7.Location = new System.Drawing.Point(305, 23);
             this.label7.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(20, 17);
+            this.label7.Size = new System.Drawing.Size(22, 17);
             this.label7.TabIndex = 22;
-            this.label7.Text = "%";
+            this.label7.Text = "‰";
             // 
             // autoDelta
             // 
@@ -216,7 +216,7 @@
             this.deltaRatio.Name = "deltaRatio";
             this.deltaRatio.Size = new System.Drawing.Size(69, 22);
             this.deltaRatio.TabIndex = 7;
-            this.deltaRatio.Text = "0.06";
+            this.deltaRatio.Text = "0.6";
             this.deltaRatio.TextChanged += new System.EventHandler(this.deltaRatio_TextChanged);
             // 
             // label3
@@ -253,9 +253,9 @@
             this.label8.Location = new System.Drawing.Point(305, 27);
             this.label8.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(20, 17);
+            this.label8.Size = new System.Drawing.Size(22, 17);
             this.label8.TabIndex = 23;
-            this.label8.Text = "%";
+            this.label8.Text = "‰";
             // 
             // autoAvg
             // 
@@ -294,6 +294,7 @@
             this.avgRatio.Name = "avgRatio";
             this.avgRatio.Size = new System.Drawing.Size(69, 22);
             this.avgRatio.TabIndex = 6;
+            this.avgRatio.Text = "0.2";
             this.avgRatio.TextChanged += new System.EventHandler(this.avgRatio_TextChanged);
             // 
             // avgRatioTrackBar
@@ -680,17 +681,17 @@
             this.dialogPanel.TabIndex = 23;
             this.dialogPanel.Visible = false;
             // 
-            // dialogTitle
+            // errorMessage
             // 
-            this.dialogTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.errorMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dialogTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dialogTitle.Location = new System.Drawing.Point(89, 22);
-            this.dialogTitle.Name = "dialogTitle";
-            this.dialogTitle.Size = new System.Drawing.Size(598, 49);
-            this.dialogTitle.TabIndex = 23;
-            this.dialogTitle.Text = "DialogTitle";
-            this.dialogTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.errorMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorMessage.Location = new System.Drawing.Point(89, 101);
+            this.errorMessage.Name = "errorMessage";
+            this.errorMessage.Size = new System.Drawing.Size(598, 49);
+            this.errorMessage.TabIndex = 24;
+            this.errorMessage.Text = "errorMessage";
+            this.errorMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dialogButton
             // 
@@ -705,17 +706,17 @@
             this.dialogButton.UseVisualStyleBackColor = true;
             this.dialogButton.Click += new System.EventHandler(this.dialogButton_Click);
             // 
-            // errorMessage
+            // dialogTitle
             // 
-            this.errorMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dialogTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.errorMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorMessage.Location = new System.Drawing.Point(89, 101);
-            this.errorMessage.Name = "errorMessage";
-            this.errorMessage.Size = new System.Drawing.Size(598, 49);
-            this.errorMessage.TabIndex = 24;
-            this.errorMessage.Text = "errorMessage";
-            this.errorMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dialogTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dialogTitle.Location = new System.Drawing.Point(89, 22);
+            this.dialogTitle.Name = "dialogTitle";
+            this.dialogTitle.Size = new System.Drawing.Size(598, 49);
+            this.dialogTitle.TabIndex = 23;
+            this.dialogTitle.Text = "DialogTitle";
+            this.dialogTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 

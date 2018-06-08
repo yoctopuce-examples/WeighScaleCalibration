@@ -176,8 +176,8 @@ namespace HiSpeed2D
             double step, bestRatio, bestSqError;
 
             // Split the space in ten slices to find the initial guess (important for convergence)
-            bRatio = 1.00001;
-            step = 0.1;
+            bRatio = 10.0001;
+            step = 1.0;
             this.recomputeDeltaTemp(false);
             bestRatio = bRatio;
             bestSqError = avgSqError;
@@ -220,7 +220,7 @@ namespace HiSpeed2D
         {
             disable_textChangeEvents = false;
             dialogPanel.Visible = false;
-            deltaRatio.Text = (Math.Round(bRatio * 100000) / 100000).ToString();
+            deltaRatio.Text = (Math.Round(bRatio * 1000) / 1000).ToString();
             autoDelta.Text = "Reset";
         }
 
@@ -229,7 +229,7 @@ namespace HiSpeed2D
             if (refresh) chart.DisableRedraw();
             if (refresh) deltaTempData.clear();
 
-            double ratio = bRatio * 0.01;
+            double ratio = bRatio * 0.001;
             double compt = temp[0];
             for (int i = 1; i < count; i++)
             {
@@ -296,7 +296,7 @@ namespace HiSpeed2D
             }
             if(refresh)
             {
-                avgRatio.Text = (Math.Round(aRatio * 100000) / 100000).ToString();
+                avgRatio.Text = (Math.Round(aRatio * 1000) / 1000).ToString();
             } else
             {
                 this.recomputeAvgTemp(false);
@@ -308,7 +308,7 @@ namespace HiSpeed2D
             if (refresh) chart.DisableRedraw();
             if (refresh) avgTempData.clear();
 
-            double ratio = aRatio * 0.01;
+            double ratio = aRatio * 0.001;
             double compt = temp[0];
             for (int i = 1; i < count; i++)
             {
@@ -327,7 +327,7 @@ namespace HiSpeed2D
         {
             // Estimate avgScale by assuming that non-constant part of the residual error is due to it
             // (so their variance should be the same).
-            double ratio = aRatio * 0.01;
+            double ratio = aRatio * 0.001;
             double errSumSq = 0, errSum = 0;
             double tempSumSq = 0, tempSum = 0;
             int sameSign = 0;
@@ -419,12 +419,12 @@ namespace HiSpeed2D
 
         private void updateCompensationTable()
         {
-            avgCompMin.Text = (Math.Round((autoOffset - 30 * alpha) * 1000) / 1000).ToString();
-            avgCompZero.Text = (Math.Round(autoOffset * 1000) / 1000).ToString();
-            avgCompMax.Text = (Math.Round((autoOffset + 100 * alpha) * 1000) / 1000).ToString();
-            deltaCompMin.Text = (Math.Round((0 - 30 * beta) * 1000) / 1000).ToString();
+            avgCompMin.Text = (Math.Round((-autoOffset + 30 * alpha) * 1000) / 1000).ToString();
+            avgCompZero.Text = (Math.Round(-autoOffset * 1000) / 1000).ToString();
+            avgCompMax.Text = (Math.Round((-autoOffset - 100 * alpha) * 1000) / 1000).ToString();
+            deltaCompMin.Text = (Math.Round((0 + 30 * beta) * 1000) / 1000).ToString();
             deltaCompZero.Text = "0";
-            deltaCompMax.Text = (Math.Round((0 + 100 * beta) * 1000) / 1000).ToString();
+            deltaCompMax.Text = (Math.Round((0 - 100 * beta) * 1000) / 1000).ToString();
         }
 
         /*****************************************************************************************
