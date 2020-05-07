@@ -1,6 +1,3 @@
-# Yoctopuce Load cell Temperature compensation Calculator 
+# DEPRECATED PLEASE USE Yocto-BridgeCalibration
 
-This tool will help you compute automatically the proper parameters to compensate
-temperature drift in your load cell using a Yocto-Bridge or Yocto-MaxiBridge.
-
-For more details, read the full explanations on [Yoctopuce blog](https://www.yoctopuce.com/EN/article/load-cell-temperature-drift-compensation)
+We now have a dedicated application available on GitHub: https://github.com/yoctopuce/Yocto-BridgeCalibration
